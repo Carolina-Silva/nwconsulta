@@ -1,0 +1,276 @@
+:root{
+  
+}
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Ubuntu",sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background: rgb(199, 193, 193);
+  color: rgb(43, 42, 42);
+}
+li {
+  list-style-type: none;
+}
+h2{
+  font-size: 35px;
+  color: #015aff;
+}
+p{
+  font-size: 17px;
+}
+
+/*HEADER ===========================================*/
+
+header{
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  margin: auto;
+  padding: 30px 40px;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: .3s linear;
+}
+header img{
+  max-width: 200px;
+}
+
+.menu-toggler{
+  background: none;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  z-index: 999;
+  display: none;
+}
+.menu-toggler span{
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  position: relative;
+  transition: .3s linear;
+}
+
+.navbar-menu a{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 30px;
+  transition: .2s linear;
+}
+.navbar-menu a:hover{
+  color: #01d5ff !important;
+}
+
+.sticky{
+  background-color: rgba(54, 54, 54, 0.815);
+  padding: 18px 30px;
+}
+
+
+
+/*MAIN ===========================================*/
+
+/*home ===========================================*/
+#home{
+  height: 100vh;
+  min-height: 500px;
+  background: url(../images/back4.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#home .inner-width{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+#home .content{
+  width: 100%;
+  color: #fff;
+}
+#home .content p{
+  color: #01d5ff;
+  font-size: 30px;
+}
+#home .content h1{
+  font-size: 60px;
+  margin: 60px 0;
+}
+#home .content h1::after{
+  content: "Transforma";
+  animation: textanim 10s linear infinite;
+}
+@keyframes textanim{
+  25%{
+    content: "Moderniza";
+  }
+  50%{
+    content: "Descomplica"; 
+  }
+  75%{
+    content: "Transforma";
+  }
+}
+
+/*sobre ===========================================*/
+#sobre .inner-width{
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: right;
+}
+#sobre .content{
+  max-width: 490px;
+}
+#sobre .sobre_img img{
+  margin-left: 20px;
+  width: 460px;
+}
+/*servicos ===========================================*/
+#servicos .inner-width{
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: left;
+}
+#servicos .servicos_img img{
+  width: 460px;
+}
+.fa-check:before{
+  color: #015aff;
+}
+#servicos .content{
+  max-width: 490px;
+}
+#servicos .content span{
+  margin-left: 10px;
+  color: #fff;
+}
+/*tecnologias ===========================================*/
+/*protheus ===========================================*/
+#protheus .inner-width{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+#protheus .content{
+  max-width: 700px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+#protheus .content h2{
+  margin-bottom: 20px;
+}
+#protheus .content img{
+  width: 200px;
+}
+
+
+/*contato ===========================================*/
+
+
+#contato{
+  text-align: center;
+}
+
+#contato .buttons a{
+  display: inline-block;
+  margin: 15px 30px;
+  color: #48dbfb;
+  font-size: 15px;
+  font-weight: 500;
+  width: 180px;
+  border: 1px solid #48dbfb;
+  padding: 14px 0;
+  border-radius: 6px;
+  transition: .2s linear;
+}
+#contato .buttons a:hover{
+  background-color: #48dbfb;
+  color: #fff;
+} 
+
+/*FOOTER ===========================================*/
+footer{
+  color: #fff;
+  background-color: rgb(54, 54, 54);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer img{
+  max-width: 200px;
+}
+.sm a{
+  color: #fff;
+  font-size: 22px;
+  margin: 0 10px;
+  transition: .2s linear;
+}
+.sm a:hover{
+  color: #48dbfb;
+} 
+
+
+
+ 
+
+/*RESPONSIVIDADE =========================*/
+@media screen and (max-width: 980px){
+  .menu-toggler{
+    display: block;
+  }
+  .navbar-menu{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(54, 54, 54);
+    top: 0;
+    right: -100%;
+    max-width: 400px;
+    padding: 80px 50px;
+    transition: .3s linear;
+  }
+  .navbar-menu a{
+    display: block;
+    font-size: 30px;
+    margin: 30px 0;
+  }
+  .sticky .navbar-menu{
+    background-color: rgb(54, 54, 54);
+  }
+  .navbar-menu.active{
+    right: 0;
+  }
+  .menu-toggler.active span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 4px;
+  }
+  .menu-toggler.active span:nth-child(2){
+    opacity: 0;
+  }
+  .menu-toggler.active span:nth-child(3){
+    transform: rotate(45deg);
+    bottom: 14px;
+  }
+}
+
