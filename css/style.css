@@ -1,6 +1,3 @@
-:root{
-  
-}
 *{
   margin: 0;
   padding: 0;
@@ -9,8 +6,13 @@
   box-sizing: border-box;
 }
 body{
-  background: rgb(199, 193, 193);
+  background: #fff;
   color: rgb(43, 42, 42);
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
 }
 li {
   list-style-type: none;
@@ -18,9 +20,15 @@ li {
 h2{
   font-size: 35px;
   color: #015aff;
+  margin-bottom: 25px;
 }
 p{
   font-size: 17px;
+  margin-bottom: 15px;
+}
+p#span{
+  color: #015aff;
+  font-size: 22px;
 }
 
 /*HEADER ===========================================*/
@@ -60,7 +68,6 @@ header img{
   position: relative;
   transition: .3s linear;
 }
-
 .navbar-menu a{
   color: #fff;
   font-size: 15px;
@@ -71,16 +78,12 @@ header img{
 .navbar-menu a:hover{
   color: #01d5ff !important;
 }
-
 .sticky{
   background-color: rgba(54, 54, 54, 0.815);
   padding: 18px 30px;
 }
 
-
-
 /*MAIN ===========================================*/
-
 /*home ===========================================*/
 #home{
   height: 100vh;
@@ -125,44 +128,66 @@ header img{
 }
 
 /*sobre ===========================================*/
-#sobre .inner-width{
-  margin: 50px 0;
+#sobre{
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  text-align: right;
 }
-#sobre .content{
-  max-width: 490px;
+#sobre .inner-width{
+  max-width: 1100px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-#sobre .sobre_img img{
-  margin-left: 20px;
-  width: 460px;
+#sobre img{
+  max-width: 90%;
+}
+.sobre_img, .content{
+  width: calc(50% - 20px);
+}
+@media screen and (max-width:960px){
+  .inner-width{
+    max-width: 600px;
+  }
+  .sobre_img, .content{
+    width: 100%;
+    margin: 20px 20px 20px 0;
+  }
+  .content p{
+    text-align: justify;
+  }
 }
 /*servicos ===========================================*/
-#servicos .inner-width{
-  margin: 50px 0;
+#servicos{
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  text-align: left;
 }
-#servicos .servicos_img img{
-  width: 460px;
+#servicos .inner-width{
+  max-width: 1100px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .fa-check:before{
   color: #015aff;
 }
-#servicos .content{
-  max-width: 490px;
+#servicos img{
+  max-width: 90%;
 }
-#servicos .content span{
-  margin-left: 10px;
-  color: #fff;
+.servicos_img, .content{
+  width: calc(50% - 20px);
 }
+
+
 /*tecnologias ===========================================*/
+
 /*protheus ===========================================*/
 #protheus .inner-width{
   display: flex;
@@ -170,41 +195,54 @@ header img{
   justify-content: center;
   height: 100%;
   text-align: center;
+  background-image: linear-gradient(45deg, #01d5ff , #015aff);
+  color: #fff;
 }
 #protheus .content{
+  padding: 30px;
   max-width: 700px;
   font-size: 20px;
   margin-bottom: 30px;
 }
 #protheus .content h2{
+  color: #fff;
   margin-bottom: 20px;
 }
 #protheus .content img{
+  max-width: 200px;
+}
+/*Fluig ===========================================*/
+#fluig .inner-width{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  background-image: linear-gradient(45deg, #015aff , #01d5ff);
+  color: #fff;
+}
+#fluig .content{
+  padding: 30px;
+  max-width: 700px;
+  font-size: 20px;
+}
+#fluig .content h2{
+  color: #fff;
+}
+#fluig .content img{
   width: 200px;
 }
 
 
 /*contato ===========================================*/
-
-
 #contato{
   text-align: center;
 }
-
-#contato .buttons a{
-  display: inline-block;
-  margin: 15px 30px;
-  color: #48dbfb;
-  font-size: 15px;
-  font-weight: 500;
-  width: 180px;
-  border: 1px solid #48dbfb;
-  padding: 14px 0;
-  border-radius: 6px;
+#contato a{
+  
   transition: .2s linear;
 }
-#contato .buttons a:hover{
-  background-color: #48dbfb;
+#contato a:hover{
   color: #fff;
 } 
 
@@ -229,10 +267,6 @@ footer img{
 .sm a:hover{
   color: #48dbfb;
 } 
-
-
-
- 
 
 /*RESPONSIVIDADE =========================*/
 @media screen and (max-width: 980px){
@@ -272,5 +306,45 @@ footer img{
     transform: rotate(45deg);
     bottom: 14px;
   }
+  
+  /* HOME ============== */
+  #home p{
+    display: inline-block;
+  }
+  /* SOBRE ============== */
+  #sobre .inner-width{
+    max-width: 600px;
+  }
+  #sobre .content, .sobre_img{
+    width: 100%;
+    margin: 20px 20px 20px 0;
+  }
+  #sobre .content p{
+    text-align: justify;
+  }
+
+  /* SERVICOS =========== */
+  #servicos .content{
+    max-width: 600px;
+  }
+  #servicos .servicos_img, .content{
+    width: 100%;
+    margin: 20px 20px 20px 0;
+  }
+  #servicos .content p{
+    text-align: justify;
+  }
+
+  /* FOOTER ============== */
+  footer{
+    padding: 40px 20px 40px 20px;
+  } 
+  footer p {
+    font-size: 14px;
+  }
+  footer sm a{
+    font-size: 20px;
+  }
+
 }
 
