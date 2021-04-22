@@ -185,8 +185,30 @@ header img{
   width: calc(50% - 20px);
 }
 
-
 /*tecnologias ===========================================*/
+#tecnologias{
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+}
+#items-wrapper{
+  width: 100vw;
+}
+#items{
+  display: flex;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.item{
+  width: 34%;
+  height: 200px;
+  scroll-snap-align: start;
+}
+#tecnologias img {
+
+  object-fit: cover;
+}
 
 /*protheus ===========================================*/
 #protheus .inner-width{
@@ -222,7 +244,7 @@ header img{
   color: #fff;
 }
 #fluig .content{
-  padding: 30px;
+  padding: 40px;
   max-width: 700px;
   font-size: 20px;
 }
