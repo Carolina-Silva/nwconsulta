@@ -88,7 +88,7 @@ header img{
 #home{
   height: 100vh;
   min-height: 500px;
-  background: url(../images/back4.jpg) no-repeat center;
+  background: url(../images/backgrondhome.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -236,16 +236,35 @@ header img{
 
 /*contato ===========================================*/
 #contato{
-  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#contato a{
-  
-  transition: .2s linear;
+#contato .inner-width{
+  max-width: 1100px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-#contato a:hover{
-  color: #fff;
-} 
-
+#contato img{
+  max-width: 100%;  
+}
+.fa-phone-alt, .fa-envelope{
+  color: #015aff;
+}
+.content_buttons, .contato_img{
+  width: calc(50% - 20px);
+}
+#contato .content_buttons p{
+  display: block;
+}
+#contato .content_buttons p a{
+  color: black;
+  font-weight: normal;
+}
 /*FOOTER ===========================================*/
 footer{
   color: #fff;
@@ -333,6 +352,15 @@ footer img{
   }
   #servicos .content p{
     text-align: justify;
+  }
+
+  /* CONTATO =========== */
+  #contato .content_buttons{
+    max-width: 700px;
+  }
+  #contato .contato_img, .content_buttons{
+    width: 100%;
+    margin: 20px 20px 20px 0;
   }
 
   /* FOOTER ============== */
